@@ -41,11 +41,11 @@ pipeline {
            steps {
 	           script {
 		        withSonarQubeEnv('sonar-server') { 
-				sh """
-					mvn clean verify sonar:sonar \
-					  -Dsonar.projectKey=my-app \
-					  -Dsonar.projectName='my-app' \
-				"""
+					sh """
+						mvn clean verify sonar:sonar \
+						  -Dsonar.projectKey=my-app \
+						  -Dsonar.projectName='my-app' \
+					"""
 		        }
 	           }	
            }
